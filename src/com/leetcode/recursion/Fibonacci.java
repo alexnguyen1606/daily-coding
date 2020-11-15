@@ -5,7 +5,7 @@ package com.leetcode.recursion;
  *     <p>November 04,2020
  */
 public class Fibonacci {
-  int[] F = new int[31];
+   int[] F = new int[31];
 
   public int fibonacciWithFor(int N) {
     if (F[N] != 0) {

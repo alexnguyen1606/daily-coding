@@ -33,10 +33,20 @@ public class ReverseString {
     s[i] = s[j];
     s[j] = temp;
   }
+  
+  public static void reverse(char[] s){
+    int start  = 0;
+    int end = s.length;
+    while (start<end){
+      swap(s,start,end-1);
+      start++;
+      end--;
+    }
+  }
 
   public static void main(String[] args) {
     char[] array = {'1', '2', '3', '4'};
-    reverseStringSolution2(array);
+    reverse(array);
       for (char c : array) {
           System.out.print(c + ",");
       }
