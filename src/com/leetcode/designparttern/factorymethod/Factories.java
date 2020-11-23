@@ -26,7 +26,7 @@ public class Factories {
     cycle = cycleFactory.getCycle();
   }
 
-  public void woker() {
+  public void worker() {
     cycle.run();
   }
 
