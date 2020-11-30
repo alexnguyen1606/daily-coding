@@ -1,5 +1,9 @@
 package com.leetcode.data_struct.linkedlist;
 
+import java.lang.reflect.Array;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
 /**
  * @author:Nguyen Anh Tuan
  *     <p>October 09,2020
@@ -8,13 +12,20 @@ public class SingleLinkedList<T> {
   private SingleLinkedList<T> head;
   private SingleLinkedList<T> next;
   private T value;
+  private Class<T> clazz;
 
   public SingleLinkedList(T value) {
     this.value = value;
+    this.clazz = (Class<T>) getClass().getDeclaringClass();
+    
   }
 
   public SingleLinkedList() {
     this.head = null;
+//    Type type = getClass().getDeclaringClass();
+//    ParameterizedType parameterizedType = (ParameterizedType) type;
+    
+    this.clazz = (Class<T>) getClass().getDeclaringClass();
   }
 
   public void add(T t) {
@@ -116,12 +127,33 @@ public class SingleLinkedList<T> {
     System.out.println();
   }
 
-  public void remove(int index){
-    if (head==null){
-     return;
+  public void remove(int index) {
+    if (head == null) {
+      return;
     }
-    if (index==0){
+    if (index == 0) {
       head = head.next;
     }
+  }
+
+  public T[] toArray() {
+    T[] array = (T[]) Array.newInstance(this.clazz, size());
+    SingleLinkedList<T> sìngleLinkedList = head;
+    int i = 0;
+    while (sìngleLinkedList != null) {
+      array[i++] = sìngleLinkedList.value;
+      sìngleLinkedList  = sìngleLinkedList.next;
+      
+    }
+    return array;
+  }
+  
+  public T getIntance(Class<T> clazz){
+    try {
+      return clazz.newInstance();
+    } catch (InstantiationException | IllegalAccessException e) {
+      e.printStackTrace();
+    }
+    return null;
   }
 }
