@@ -8,14 +8,12 @@ public class MaxSubArrray_53 {
   public int maxSubArray(int[] nums) {
     int n = nums.length;
     int max = Integer.MIN_VALUE;
-    for (int i = 0; i < n; i++) {
-      for (int j = n - 1; j >= i; j--) {
-        int temp = incremental(nums, i, j);
-        if (temp > max) {
-          max = temp;
-        }
-      }
+    int current = nums[0];
+    for (int i = 1; i < n; i++) {
+      current = Math.max(current+nums[i],nums[i]);
+      max = Math.max(current,max);
     }
+
     return max;
   }
 
@@ -28,6 +26,6 @@ public class MaxSubArrray_53 {
   }
 
   public static void main(String[] args) {
-    System.out.println(1/5); //
+    System.out.println(1 / 5); //
   }
 }
