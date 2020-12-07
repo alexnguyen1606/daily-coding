@@ -13,7 +13,6 @@ public class MaxSubArrray_53 {
       current = Math.max(current+nums[i],nums[i]);
       max = Math.max(current,max);
     }
-
     return max;
   }
 

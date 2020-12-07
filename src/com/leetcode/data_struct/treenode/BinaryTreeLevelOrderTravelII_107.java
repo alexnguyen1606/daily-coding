@@ -3,6 +3,7 @@ package com.leetcode.data_struct.treenode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author:Nguyen Anh Tuan
@@ -13,6 +14,17 @@ public class BinaryTreeLevelOrderTravelII_107 {
     List<List<Integer>> listOfList = new LinkedList<>();
     if (root == null) {
       return listOfList;
+    }
+      Stack<TreeNode> stack = new Stack<>();
+    stack.push(root);
+    while (!stack.empty()){
+        TreeNode treeNode = stack.pop();
+        if (treeNode.left!= null){
+            stack.push(treeNode.left);
+        }
+        if (treeNode.right!= null){
+            stack.push(treeNode.right);
+        }
     }
     List<Integer> rootList = new LinkedList<>();
     getList(root, rootList);

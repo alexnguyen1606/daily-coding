@@ -7,7 +7,7 @@ import java.util.List;
  * @author:Nguyen Anh Tuan
  *     <p>2:02 PM ,November 23,2020
  */
-public class AddtoArrayFormofInteger_989 {
+public class AddtoArrayFormOfInteger_989 {
   public List<Integer> addToArrayForm(int[] digits, int K) {
     int length = digits.length;
     digits[length - 1] = digits[length - 1] + K;
