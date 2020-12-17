@@ -1,44 +1,37 @@
 package com.leetcode.data_struct.tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author:Nguyen Anh Tuan
  *     <p>11:45 AM ,December 10,2020
  */
 public class validBST_98 {
   public boolean isValidBST(TreeNode root) {
-      if (root==null){
-          return true;
+    List<Integer> list = new ArrayList<>();
+    dfsInorder(root, list);
+    int i = 1;
+    int j = list.size() - 1;
+    while (i <= j) {
+      if (list.get(i - 1) >= list.get(i)) {
+        return false;
       }
-      if (root.left!=null && root.left.val >= root.val){
-          return false;
-      }else if(root.left!=null){
-          int left = leftMostNode(root);
-          int right =rightMostNode(root);
-//          return isValidBST(root.left) && right > left
+      if (list.get(j - 1) >= list.get(j)) {
+        return false;
       }
-      if (root.right!=null && root.right.val <= root.val){
-          return false;
-      }
-      return isValidBST(root.right) && isValidBST(root.left);
+      i++;
+      j--;
+    }
+    return true;
   }
 
-  private int leftMostNode(TreeNode root) {
-    if (root == null) {
-      return -1;
+  private void dfsInorder(TreeNode treeNode, List<Integer> list) {
+    if (treeNode == null) {
+      return;
     }
-    if (root.left == null) {
-      return root.val;
-    }
-    return leftMostNode(root.left);
-  }
-
-  private int rightMostNode(TreeNode root) {
-    if (root == null) {
-      return -1;
-    }
-    if (root.left == null) {
-      return root.val;
-    }
-    return rightMostNode(root.left);
+    dfsInorder(treeNode.left, list);
+    list.add(treeNode.val);
+    dfsInorder(treeNode.right, list);
   }
 }

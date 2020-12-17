@@ -19,7 +19,6 @@ public class MultiplyStrings_43 {
       num1 = num2;
       num2 = tempString;
     }
-
     int length1 = num1.length();
     int length2 = num2.length();
     num1 = reverseString(num1);

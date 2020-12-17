@@ -1,11 +1,31 @@
-package com.leetcode.data_struct.tree;
+package com.leetcode.data_struct.tree.travel;
+
+import com.leetcode.data_struct.tree.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author:Nguyen Anh Tuan
- *     <p>1:50 PM ,December 10,2020
+ *     <p>10:56 AM ,December 11,2020
  */
-public class DeleteNodeInBST_450 {
-  public TreeNode deleteNode(TreeNode root, int key) {
+public class InorderTraversal_94 {
+  public List<Integer> inorderTraversal(TreeNode root) {
+    List<Integer> list = new ArrayList<>();
+    dfs(root, list);
+    return list;
+  }
+
+  private void dfs(TreeNode treeNode, List<Integer> list) {
+    if (treeNode == null) {
+      return;
+    }
+    dfs(treeNode.left, list);
+    list.add(treeNode.val);
+    dfs(treeNode.right, list);
+  }
+
+  private TreeNode deleteNode(TreeNode root, int key) {
     if (root == null) {
       return root;
     }
@@ -61,12 +81,5 @@ public class DeleteNodeInBST_450 {
       return root.val;
     }
     return leftMostNode(root.left);
-  }
-  
-  private int rightMostNode(TreeNode root) {
-    if (root.right == null) {
-      return root.val;
-    }
-    return rightMostNode(root.right);
   }
 }

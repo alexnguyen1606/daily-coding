@@ -26,7 +26,6 @@ public class ConvertSortedArrayToBST_108 {
   public boolean searchBST(TreeNode node, int target) {
     if (node != null) {
       if (node.val == target) {
-        System.out.println("Tìm thấy target");
         return true;
       }
       return node.val > target ? searchBST(node.left, target) : searchBST(node.right, target);

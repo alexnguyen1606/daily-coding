@@ -5,12 +5,12 @@ package com.leetcode.data_struct.tree;
  *     <p>4:32 PM ,November 13,2020
  */
 public class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
+  public int val;
+  public TreeNode left;
+  public TreeNode right;
 
   TreeNode() {}
- 
+
   TreeNode(int val) {
     this.val = val;
   }

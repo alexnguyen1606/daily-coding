@@ -43,6 +43,6 @@ public class ValidPalindromeString_125 {
     }
 
   public static void main(String[] args) {
-    System.out.println(isPalindrome("xin chao . 18292 ; sjksks ; ||  "));
+    System.out.println(isPalindrome2("race car"));
   }
 }

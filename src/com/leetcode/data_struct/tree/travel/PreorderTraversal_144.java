@@ -1,4 +1,6 @@
-package com.leetcode.data_struct.tree;
+package com.leetcode.data_struct.tree.travel;
+
+import com.leetcode.data_struct.tree.TreeNode;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -17,7 +19,7 @@ public class PreorderTraversal_144 {
     return list;
   }
 
-  public void travel(TreeNode node, List<Integer> list) {
+  private void travel(TreeNode node, List<Integer> list) {
     if (node == null) {
       return;
     }
