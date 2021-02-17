@@ -31,9 +31,7 @@ public class SnapshotArray {
     
     public int snap() {
         int[] snapArray = new int[maxIndex + 1];
-        for (int i = 0; i <= maxIndex; i++) {
-            snapArray[i] = array[i];
-        }
+        System.arraycopy(array, 0, snapArray, 0, maxIndex + 1);
         return getSnap(snapArray);
         
     }

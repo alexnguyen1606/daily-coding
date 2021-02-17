@@ -20,8 +20,7 @@ public class ValidMountainArray {
     for (int i = 0; (i + 1) < A.length; i++) {
       int j = i + 1;
       if (A[i] > A[j]) {// đang giảm
-        if (isIncreement == false) {
-          isIncreement = false;
+        if (!isIncreement) {
         } else {
           if (i == 0) {
             return false;

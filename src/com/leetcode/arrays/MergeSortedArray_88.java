@@ -9,13 +9,9 @@ import java.util.Collections;
  */
 // Merge Sort Arrary
 public class MergeSortedArray_88 {
-  public static void main(String[] args) {
-    int[] a = {0, 0};
-    int[] b = {1};
-    merge2(a, 1, b, 1);
-  }
+  
 
-  public static void merge(int[] nums1, int m, int[] nums2, int n) {
+  public  void merge(int[] nums1, int m, int[] nums2, int n) {
     int length = nums1.length - m;
     for (int i = 0; i < n; i++) {
       nums1[m + i] = nums2[i];
@@ -34,7 +30,7 @@ public class MergeSortedArray_88 {
     }
   }
 
-  public static void merge2(int[] nums1, int m, int[] nums2, int n) {
+  public  void merge2(int[] nums1, int m, int[] nums2, int n) {
     int i = m - 1;
     int j = n - 1;
     int k = m + n - 1;

@@ -12,11 +12,5 @@ public class Bicycle implements Cycle {
     System.out.println("Bicycle run");
   }
 
-  public static CycleFactory factory =
-      new CycleFactory() {
-        @Override
-        public Cycle getCycle() {
-          return new Bicycle();
-        }
-      };
+  public static CycleFactory factory = Bicycle::new;
 }

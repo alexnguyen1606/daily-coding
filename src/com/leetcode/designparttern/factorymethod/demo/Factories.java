@@ -5,7 +5,7 @@ package com.leetcode.designparttern.factorymethod.demo;
  *     <p>September 11,2020
  */
 public class Factories {
-  public Service service;
+  private Service service;
 
   public Service serviceConsumer(FactoryService factoryService) {
     this.service = factoryService.getService();
