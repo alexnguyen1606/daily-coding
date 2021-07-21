@@ -45,8 +45,7 @@ public class SignlyLinkedList {
     SignlyLinkedList lastNode = head;
     while (lastNode != null) {
       if (lastNode.next == null) {
-        SignlyLinkedList newNode = new SignlyLinkedList(val);
-        lastNode.next = newNode;
+        lastNode.next = new SignlyLinkedList(val);
         return;
       }
       lastNode = lastNode.next;
@@ -58,8 +57,7 @@ public class SignlyLinkedList {
     SignlyLinkedList lastNode = head;
     while (lastNode != null) {
       if (lastNode.next == null) {
-        SignlyLinkedList newNode = new SignlyLinkedList(val);
-        lastNode.next = newNode;
+        lastNode.next = new SignlyLinkedList(val);
         return;
       }
       lastNode = lastNode.next;
@@ -72,7 +70,7 @@ public class SignlyLinkedList {
    * length of linked list, the node will be appended to the end of linked list. If index is greater
    * than the length, the node will not be inserted.
    */
-  public void addAtIndex(int index, int val) {
+  public void add(int index, int val) {
     if (index == 0) {
       addAtHead(val);
     } else {

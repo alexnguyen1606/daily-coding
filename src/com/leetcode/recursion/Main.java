@@ -1,6 +1,6 @@
 package com.leetcode.recursion;
 
-import com.leetcode.designparttern.factorymethod.Excersice25;
+import com.designpattern.factorymethod.Excersice25;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

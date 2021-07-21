@@ -11,7 +11,7 @@ public class BubbleSort extends CommonSort{
 	  BubbleSort bubbleSort = new BubbleSort();
 	  int[] array = new int[]{2,3,5,1,3,2,9,120,2,4,5,2,6,10};
 	  long start = System.currentTimeMillis();
-	  bubbleSort.sort(array);
+	  bubbleSort.sortOptimize(array);
 	  long end = System.currentTimeMillis();
     System.out.println(end-start);
 	//  bubbleSort.print(array);
