@@ -1,5 +1,7 @@
 package com.designpattern;
 
+import java.util.HashSet;
+
 /**
  * @author:Nguyen Anh Tuan
  * <p>
@@ -22,4 +24,6 @@ public class RedDuck extends Duck  {
         redDuck.performFly();
         redDuck.display();
     }
+    
+   
 }
