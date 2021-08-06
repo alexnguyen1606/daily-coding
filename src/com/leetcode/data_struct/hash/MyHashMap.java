@@ -1,6 +1,8 @@
 package com.leetcode.data_struct.hash;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * @author:Nguyen Anh Tuan
@@ -33,19 +35,21 @@ public class MyHashMap {
 
 	public void put(int key, int value) {
 		int valueHashIndex = hashFunction(key);
+		// get bucket
 		ArrayList<InnerHashMap> values = arrayList[valueHashIndex];
+		// put to bucket
 		if (values == null) {
 			arrayList[valueHashIndex] = new ArrayList<>();
 			arrayList[valueHashIndex].add(new InnerHashMap(key, value));
 		}else {
 			InnerHashMap check = new InnerHashMap(key, 0);
 			int indexKey = values.indexOf(check);
-			InnerHashMap innerHashMap = indexKey >= 0 ? values.get(indexKey) : null;
-			if (innerHashMap == null) {
-				innerHashMap = new InnerHashMap(key,value);
+			InnerHashMap innerHashMap = indexKey >= 0 ? values.get(indexKey) : check;
+			innerHashMap.value = value;
+			if (indexKey < 0) {
 				values.add(innerHashMap);
 			} else {
-				innerHashMap.value = value;
+				values.set(indexKey,innerHashMap);
 			}
 		}
 
