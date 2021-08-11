@@ -5,7 +5,7 @@ package com.brownbox_online.array.sorts;
  * <p>
  * 10:17 AM ,August 11,2021
  */
-public abstract class AbsSort {
+public abstract class BaseSort {
     public static void swap(int[] array,int indexSource,int indexDes){
         int temp = array[indexDes];
         array[indexDes] = array[indexSource];
@@ -18,4 +18,5 @@ public abstract class AbsSort {
         }
         System.out.println();
     }
+    
 }

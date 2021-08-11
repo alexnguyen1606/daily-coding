@@ -5,7 +5,7 @@ package com.brownbox_online.array.sorts;
  * <p>
  * 10:16 AM ,August 11,2021
  */
-public class InsertionSort extends AbsSort {
+public class InsertionSort extends BaseSort {
     public static void insertionSort(int[] array){
         int n = array.length;
         print(array);

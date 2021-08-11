@@ -5,7 +5,7 @@ package com.brownbox_online.array.sorts;
  * <p>
  * 10:18 AM ,August 11,2021
  */
-public class SelectionSort extends AbsSort{
+public class SelectionSort extends BaseSort {
     public static void selectionSort(int[] array,boolean check){
         int n = array.length;
         for (int i = 0;i<n-1;i++){
