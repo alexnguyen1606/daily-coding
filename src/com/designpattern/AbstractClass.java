@@ -2,6 +2,7 @@ package com.designpattern;
 
 import com.designpattern.templatemethod.Inteface;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -32,6 +33,11 @@ public  class AbstractClass<T> implements Inteface<T> {
 
   public static void main(String[] args) {
     AbstractClass<String> abc = new AbstractClass<>();
+    int[] a = {1,201,20,20};
+    for(int i = 0;i<a.length;i++){
+        a[i] = i;
+    }
     abc.callOut("xin chào");
+    
   }
 }

@@ -20,6 +20,7 @@ public class RemoveElement_27 {
 		return count;
 	}
 
+	// return new length
 	public int removeElementWithTwoPointer(int[] nums, int val) {
 		int k = 0;
 		for (int i = 0; i< nums.length;i++){

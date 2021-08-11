@@ -11,6 +11,7 @@ public class CheckIfNandItsDoubleExist {
   public static void main(String[] args) {
     int[] array = {-20,8,-6,-14,0,-19,14,4};
     System.out.println(checkExitsDoubleN(array));
+   
   }
 
     public static boolean checkExitsDoubleN(int[] array ){
