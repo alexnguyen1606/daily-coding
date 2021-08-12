@@ -6,14 +6,12 @@ package com.brownbox_online.array.sorts;
  * 10:18 AM ,August 11,2021
  */
 public class SelectionSort extends BaseSort {
-    public static void selectionSort(int[] array,boolean check){
+    public static void selectionSort(int[] array){
         int n = array.length;
         for (int i = 0;i<n-1;i++){
             int index = i;
             for (int j = i;j<n;j++){
-                if (check && array[j] < array[index] ){
-                    index = j;
-                }else if (!check && array[j] > array[index]){
+                if ( array[j] < array[index] ){
                     index = j;
                 }
             }
