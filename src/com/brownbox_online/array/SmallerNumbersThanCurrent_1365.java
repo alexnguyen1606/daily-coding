@@ -62,6 +62,36 @@ public class SmallerNumbersThanCurrent_1365 {
         }
         return iL;
     }
+    
+    public static int[] mergeSort(int[] array, int L, int R){
+        if (L==R){
+            return new int[]{array[L]};
+        }
+        int mid = (R-L)/2;
+        int[] leftArray = mergeSort(array,L,mid);
+        int[] rightArray = mergeSort(array,mid+1,R);
+        int[] result = new int[leftArray.length+rightArray.length];
+        int i =0,j = 0,k=0;
+        while (i<result.length){
+            if ( j < leftArray.length && k<rightArray.length){
+                if (leftArray[j] > rightArray[k]){
+                    result[i] = rightArray[k];
+                    k++;
+                }else {
+                    result[i] = leftArray[j];
+                    j++;
+                }
+            }else if (j<leftArray.length){
+                result[i] = leftArray[j];
+                j++;
+            }else {
+                result[i] = rightArray[k];
+                k++;
+            }
+            i++;
+        }
+        return result;
+    }
 
 
     
