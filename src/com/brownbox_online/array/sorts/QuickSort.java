@@ -1,5 +1,7 @@
 package com.brownbox_online.array.sorts;
 
+import java.util.Arrays;
+
 /**
  * @author:Nguyen Anh Tuan
  *     <p>5:28 PM ,August 11,2021
@@ -19,12 +21,10 @@ public class QuickSort extends BaseSort {
     }
     // Tìm key
     // Có thể lấy ở vị trí bất kỳ
-    int key = array[(R + L) / 2];
-    
+    int key = array[L+(R - L) / 2];
     int pivotIndex = pivot(array, L, R, key);
-
     // Lặp lại
-    quickSort(array, L, pivotIndex - 1);
+    quickSort(array, L, pivotIndex-1 );
     quickSort(array, pivotIndex, R);
   }
 
