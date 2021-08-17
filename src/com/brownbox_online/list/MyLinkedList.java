@@ -18,17 +18,13 @@ public class MyLinkedList {
 	 */
 	public int get(int index) {
 		Node fastNode = this.head;
-		Node slowNode = null;
 		int count = 0;
-		while (fastNode != null || slowNode != null) {
-			if (count == index + 1) {
-				return slowNode.value;
+		while (fastNode != null) {
+			if (count == index ) {
+				return fastNode.value;
 			}
 			count++;
-			slowNode = fastNode;
-			if (fastNode != null) {
-				fastNode = fastNode.next;
-			}
+			fastNode = fastNode.next;
 		}
 		return -1;
 	}
@@ -77,7 +73,7 @@ public class MyLinkedList {
 		}
 		Node fast = this.head;
 		Node slow = null;
-		while (fast != null || slow != null) {
+		while (fast != null ) {
 			if (count == index ) {
 				Node newNode = new Node(val);
 				slow.next = newNode;
@@ -86,9 +82,8 @@ public class MyLinkedList {
 				return;
 			}
 			slow = fast;
-			if (fast!=null){
-				fast = fast.next;
-			}
+			fast = fast.next;
+			
 			count++;
 		}
 	}
@@ -101,32 +96,35 @@ public class MyLinkedList {
 			return;
 		}
 		if (index==0 && head!=null){
-			head = head.next;
-			if (SIZE==1){
-				tail = null;
-			}
-			SIZE--;
+			removeAtHead();
 			return;
 		}
 
 		Node fast = this.head;
 		Node slow = null;
 		int count = 0;
-		while (fast!=null || slow!=null){
+		while (fast!=null){
 			if (count == index){
-				if (slow!=null){
-					slow.next = fast.next;
-				}
+				slow.next = fast.next;
 				if (slow.next==null){
 					tail = slow;
 				}
 				SIZE--;
 				return;
-
 			}
 			slow = fast;
 			fast = fast.next;
 			count++;
+		}
+	}
+	
+	public void removeAtHead(){
+		if (head!=null){
+			head = head.next;
+			if (SIZE==1){
+				tail = null;
+			}
+			SIZE--;
 		}
 	}
 
@@ -175,7 +173,9 @@ public class MyLinkedList {
 		myLinkedList.addAtTail(3);
 		myLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3
 		myLinkedList.print();
-		myLinkedList.get(1);              // return 2
+    System.out.println(myLinkedList.get(0) ); // return 2
+    System.out.println(myLinkedList.get(1) ); // return 2
+    System.out.println(myLinkedList.get(2) ); // return 2
 		myLinkedList.deleteAtIndex(1);    // now the linked list is 1->3
 		myLinkedList.get(1);
 		myLinkedList.print();

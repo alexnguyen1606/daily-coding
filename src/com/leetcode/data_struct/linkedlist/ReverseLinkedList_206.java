@@ -11,8 +11,9 @@ public class ReverseLinkedList_206 {
       return head;
     }
     ListNode currentNode = head;
+    ListNode nextNode;
     while (currentNode != null && currentNode.next != null) {
-      ListNode nextNode = currentNode.next;
+      nextNode = currentNode.next;
       currentNode.next = nextNode.next;
       nextNode.next = head;
       head = nextNode;
