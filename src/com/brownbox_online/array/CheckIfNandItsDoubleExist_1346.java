@@ -7,7 +7,7 @@ import java.util.Map;
  * @author:Nguyen Anh Tuan
  *     <p>4:52 PM ,August 13,2021
  */
-public class _1346_CheckIfNandItsDoubleExist {
+public class CheckIfNandItsDoubleExist_1346 {
   public boolean checkIfExist(int[] arr) {
     Map<Integer, Integer> map = new HashMap<>();
     for (int i = 0; i < arr.length - 1; i++) {
