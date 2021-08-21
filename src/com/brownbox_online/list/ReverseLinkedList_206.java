@@ -6,6 +6,8 @@ package com.brownbox_online.list;
  */
 public class ReverseLinkedList_206 <T>{
 
+
+
   public static ListNode reverseList(ListNode head) {
     if (head == null) {
       return head;
@@ -20,10 +22,20 @@ public class ReverseLinkedList_206 <T>{
     }
    return head;
   }
+
+  public static ListNode reverseByRecursive(ListNode head){
+      if (head.next == null){
+          return head;
+      }
+      ListNode nextNode = reverseByRecursive(head.next);
+      nextNode.next = head;
+
+      return head;
+  }
   
  
   
-  public ListNode recursiveReverse(ListNode head, ListNode currentNode){
+  public ListNode reverseList(ListNode head, ListNode currentNode){
       if (currentNode==null || currentNode.next==null){
           return head;
       }
@@ -31,7 +43,7 @@ public class ReverseLinkedList_206 <T>{
       currentNode.next = nextNode.next;
       nextNode.next = head;
       head = nextNode;
-      return recursiveReverse(head,currentNode);
+      return reverseList(head,currentNode);
   }
 
   public static void main(String[] args) {
