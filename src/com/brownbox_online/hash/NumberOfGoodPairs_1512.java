@@ -1,4 +1,4 @@
-package com.brownbox_online.array;
+package com.brownbox_online.hash;
 
 import java.util.*;
 
@@ -35,6 +35,13 @@ public class NumberOfGoodPairs_1512 {
         }
         return count;
     }
+    
+    public static int numIdenticalPairsTypeSecond(int[] nums) {
+        
+        return 0;
+        
+    }
+    
 
   public static void main(String[] args) {
     int[] array = {1,2,3,1,1,3};

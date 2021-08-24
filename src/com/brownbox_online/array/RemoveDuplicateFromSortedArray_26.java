@@ -1,4 +1,4 @@
-package com.brownbox_online;
+package com.brownbox_online.array;
 
 /**
  * @author:Nguyen Anh Tuan

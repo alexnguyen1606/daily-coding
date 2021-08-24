@@ -23,14 +23,21 @@ public class ReverseLinkedList_206 <T>{
    return head;
   }
 
+  //return new head
+    //reverse linkedlist
   public static ListNode reverseByRecursive(ListNode head){
-      if (head.next == null){
+      if (head==null ){
+          return null;
+      }
+      
+      ListNode nextNode = head.next;
+      if (nextNode==null){
           return head;
       }
-      ListNode nextNode = reverseByRecursive(head.next);
+      ListNode newHead = reverseByRecursive(nextNode);
       nextNode.next = head;
-
-      return head;
+      head.next = null;
+      return newHead;
   }
   
  

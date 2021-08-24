@@ -14,8 +14,7 @@ public class MergeSortedLinkedList_21 {
     }
     // Lấy 1 phần tử L1
     if (l1.val <= l2.val) {
-      ListNode nextL1 = l1.next;
-      ListNode nextElement = mergeTwoLists(nextL1, l2);
+      ListNode nextElement = mergeTwoLists(l1.next, l2);
       l1.next = nextElement;
       return l1;
     } else { // lấy 1 phần tử của l2

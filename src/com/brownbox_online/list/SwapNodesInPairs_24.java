@@ -7,6 +7,14 @@ package com.brownbox_online.list;
  */
 public class SwapNodesInPairs_24 {
 	public ListNode swapPairs(ListNode head) {
-		return head;
+		if (head==null || head.next==null){
+			return head;
+		}
+		ListNode nextNode = head.next;
+		head.next = nextNode.next;
+		nextNode.next = head;
+		ListNode newNode = swapPairs(head.next);
+		head.next = newNode;
+		return nextNode;
 	}
 }
