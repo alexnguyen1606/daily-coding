@@ -5,7 +5,7 @@ package com.brownbox_online.array;
  * <p>
  * 11:39 PM ,August 25,2021
  */
-public class MissignNumber_268 {
+public class MissingNumber_268 {
 	// độ phức tạp O(n)
 	public int missingNumber(int[] nums) {
 		int n = nums.length;

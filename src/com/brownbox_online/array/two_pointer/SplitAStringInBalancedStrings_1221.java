@@ -1,4 +1,4 @@
-package com.brownbox_online.array;
+package com.brownbox_online.array.two_pointer;
 
 /**
  * @author:Nguyen Anh Tuan

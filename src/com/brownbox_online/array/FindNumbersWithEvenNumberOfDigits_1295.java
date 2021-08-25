@@ -8,7 +8,7 @@ package com.brownbox_online.array;
  */
 public class FindNumbersWithEvenNumberOfDigits_1295 {
 
-
+	// return numbers numerous with length Even
 	public int findNumbers(int[] nums) {
 		int count = 0;
 		for (int num : nums) {
@@ -26,12 +26,9 @@ public class FindNumbersWithEvenNumberOfDigits_1295 {
 			count++;
 			number = number/10;
 		}
-		Integer integer = 10;
 		return count;
 	}
 
-	public static void main(String[] args) {
-
-	}
+	
 
 }

@@ -1,10 +1,9 @@
-package com.brownbox_online.array;
+package com.brownbox_online.hash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author:Nguyen Anh Tuan

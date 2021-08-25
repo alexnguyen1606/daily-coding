@@ -1,4 +1,4 @@
-package com.brownbox_online.array;
+package com.brownbox_online.hash;
 
 import java.util.HashSet;
 import java.util.List;

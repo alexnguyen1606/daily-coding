@@ -1,4 +1,4 @@
-package com.brownbox_online.array;
+package com.brownbox_online.array.sorts;
 
 import java.util.Arrays;
 
@@ -10,7 +10,6 @@ import java.util.Arrays;
 public class HeightCheck_1051 {
 	public static int heightChecker(int[] heights) {
 		int count = 0;
-		int value;
 		int[] copiedArray = Arrays.copyOf(heights,heights.length);
 		sort(heights,0,heights.length-1);
 		for (int i =0;i<heights.length;i++){
