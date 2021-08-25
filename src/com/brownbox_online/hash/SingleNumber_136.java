@@ -29,11 +29,5 @@ public class SingleNumber_136 {
     return -1;
   }
 	
-	public int singleNumberWithBit(int[] nums) {
-  	    int result = 0;
-  	    for (int value : nums){
-  	    	result ^=value;
-        }
-  	    return result;
-	}
+	
 }

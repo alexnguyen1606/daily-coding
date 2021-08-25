@@ -56,6 +56,7 @@ public class DeleteNodeInBST_450 {
     return root;
   }
 
+  //return giá trị node trái cùng
   private int leftMostNode(TreeNode root) {
     if (root.left == null) {
       return root.val;
@@ -63,6 +64,7 @@ public class DeleteNodeInBST_450 {
     return leftMostNode(root.left);
   }
   
+  //return giá trị node phải cùng
   private int rightMostNode(TreeNode root) {
     if (root.right == null) {
       return root.val;
