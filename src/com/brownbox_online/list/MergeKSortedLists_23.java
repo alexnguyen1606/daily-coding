@@ -71,7 +71,7 @@ public class MergeKSortedLists_23 {
 	}
 	
 	// Độ phức tạp O(n*logn)
-	// Sử dụng priority queue
+	// Dựa vào tính chất sắp xếp của priority queue
 	public ListNode mergeKSortedListByPriorityQueue(ListNode[] lists){
 		PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
 		for (ListNode node : lists){
