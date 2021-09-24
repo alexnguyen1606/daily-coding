@@ -21,10 +21,10 @@ public class QuickSort extends BaseSort {
     }
     // Tìm key
     // Có thể lấy ở vị trí bất kỳ
+    // Sử dụng middle index in array
     int key = array[L+(R - L) / 2];
     System.out.println(Arrays.toString(array));
     int pivotIndex = pivot(array, L, R, key);
-    // Lặp lại
     System.out.println("L ="+L+" R="+R+" key="+key+" pivotIndex="+pivotIndex);
     quickSort(array, L, pivotIndex-1 );
     quickSort(array, pivotIndex, R);

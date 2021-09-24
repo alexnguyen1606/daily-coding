@@ -1,4 +1,6 @@
-package com.brownbox_online.list;
+package com.brownbox_online.recursion;
+
+import com.brownbox_online.list.ListNode;
 
 /**
  * @author:Nguyen Anh Tuan

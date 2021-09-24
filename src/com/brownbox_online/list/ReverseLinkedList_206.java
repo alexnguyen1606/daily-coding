@@ -4,7 +4,7 @@ package com.brownbox_online.list;
  * @author:Nguyen Anh Tuan
  *     <p>10:38 PM ,August 14,2021
  */
-public class ReverseLinkedList_206 <T>{
+public class ReverseLinkedList_206{
 
 
 
@@ -23,24 +23,7 @@ public class ReverseLinkedList_206 <T>{
    return head;
   }
 
-  //return new head
-    //reverse linkedlist
-  public static ListNode reverseByRecursive(ListNode head){
-      if (head==null ){
-          return null;
-      }
-      
-      ListNode nextNode = head.next;
-      if (nextNode==null){
-          return head;
-      }
-      ListNode newHead = reverseByRecursive(nextNode);
-      nextNode.next = head;
-      head.next = null;
-      return newHead;
-  }
   
- 
   
   public ListNode reverseList(ListNode head, ListNode currentNode){
       if (currentNode==null || currentNode.next==null){

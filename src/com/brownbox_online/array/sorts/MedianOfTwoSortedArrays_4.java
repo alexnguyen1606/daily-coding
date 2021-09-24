@@ -4,6 +4,7 @@ package com.brownbox_online.array.sorts;
  * @author:Nguyen Anh Tuan
  *     <p>6:20 PM ,August 27,2021
  */
+//Hard
 public class MedianOfTwoSortedArrays_4 {
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     int[] merged = mergeSortedArray(nums1, nums2);
