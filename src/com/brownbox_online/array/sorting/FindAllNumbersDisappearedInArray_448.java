@@ -1,4 +1,4 @@
-package com.brownbox_online.array.sorts;
+package com.brownbox_online.array.sorting;
 
 import java.util.ArrayList;
 import java.util.List;

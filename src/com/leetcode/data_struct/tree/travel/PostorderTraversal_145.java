@@ -24,4 +24,12 @@ public class PostorderTraversal_145 {
     dfs(node.right, list);
     list.add(node.val);
   }
+
+  public static void main(String[] args) {
+    int x = 1;
+    x^=2;
+//    x^=3;
+    
+    System.out.println(x);
+  }
 }
