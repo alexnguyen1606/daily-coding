@@ -1,4 +1,4 @@
-package designpattern.proxypattern;
+package com.designpattern.proxypattern;
 
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;

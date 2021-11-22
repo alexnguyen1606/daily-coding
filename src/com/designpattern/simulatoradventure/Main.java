@@ -1,10 +1,10 @@
-package designpattern.simulatoradventure;
+package com.com.designpattern.simulatoradventure;
 
-import designpattern.simulatoradventure.charactor.Character;
-import designpattern.simulatoradventure.charactor.King;
-import designpattern.simulatoradventure.weapons.AxeBehavior;
-import designpattern.simulatoradventure.weapons.SwordBehavior;
-import designpattern.simulatoradventure.weapons.WeaponBehavior;
+import com.designpattern.simulatoradventure.charactor.Character;
+import com.designpattern.simulatoradventure.charactor.King;
+import com.designpattern.simulatoradventure.weapons.AxeBehavior;
+import com.designpattern.simulatoradventure.weapons.SwordBehavior;
+import com.designpattern.simulatoradventure.weapons.WeaponBehavior;
 
 /**
  * @author:Nguyen Anh Tuan

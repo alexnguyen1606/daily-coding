@@ -1,4 +1,4 @@
-package designpattern.observerpattern;
+package com.designpattern.observerpattern;
 
 /**
  * @author:Nguyen Anh Tuan

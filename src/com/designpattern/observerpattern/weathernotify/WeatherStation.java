@@ -1,8 +1,8 @@
-package designpattern.observerpattern.weathernotify;
+package com.designpattern.observerpattern.weathernotify;
 
-import designpattern.observerpattern.weathernotify.displays.CurrentConditionDisplay;
-import designpattern.observerpattern.weathernotify.displays.ForecastDisplay;
-import designpattern.observerpattern.weathernotify.displays.ThirdPartyDisplay;
+import com.designpattern.observerpattern.weathernotify.displays.CurrentConditionDisplay;
+import com.designpattern.observerpattern.weathernotify.displays.ForecastDisplay;
+import com.designpattern.observerpattern.weathernotify.displays.ThirdPartyDisplay;
 
 /**
  * @author:Nguyen Anh Tuan

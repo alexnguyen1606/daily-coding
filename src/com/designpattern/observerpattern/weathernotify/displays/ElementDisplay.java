@@ -1,4 +1,4 @@
-package designpattern.observerpattern.weathernotify.displays;
+package com.designpattern.observerpattern.weathernotify.displays;
 
 /**
  * @author:Nguyen Anh Tuan

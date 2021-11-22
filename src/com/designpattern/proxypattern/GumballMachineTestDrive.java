@@ -1,6 +1,6 @@
-package designpattern.proxypattern;
+package com.designpattern.proxypattern;
 
-import designpattern.statepattern.GumBallMachine;
+import com.designpattern.statepattern.GumBallMachine;
 
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;

@@ -1,6 +1,6 @@
-package designpattern.statepattern;
+package com.designpattern.statepattern;
 
-import designpattern.proxypattern.GumballMachineRemote;
+import com.designpattern.proxypattern.GumballMachineRemote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

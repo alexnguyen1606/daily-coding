@@ -1,4 +1,4 @@
-package designpattern.simulatoradventure.weapons;
+package com.designpattern.simulatoradventure.weapons;
 
 /**
  * @author:Nguyen Anh Tuan

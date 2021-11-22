@@ -11,7 +11,7 @@ import java.util.Set;
  * <p>
  * 10:14 PM ,July 21,2021
  */
-public  class AbstractClass<T> implements Inteface<T> {
+public class AbstractClass<T> implements Inteface<T> {
     
     @Override
     public void print() {
@@ -27,7 +27,7 @@ public  class AbstractClass<T> implements Inteface<T> {
         }
     }
     
-    public void priint(List<String> lis){
+    public void print(List<String> lis){
     
     }
 

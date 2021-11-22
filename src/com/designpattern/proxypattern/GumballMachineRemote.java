@@ -1,6 +1,6 @@
-package designpattern.proxypattern;
+package com.designpattern.proxypattern;
 
-import designpattern.statepattern.State;
+import com.designpattern.statepattern.State;
 
 import java.rmi.Remote;
 

@@ -1,4 +1,4 @@
-package designpattern.statepattern;
+package com.designpattern.statepattern;
 
 /**
  * @author:Nguyen Anh Tuan

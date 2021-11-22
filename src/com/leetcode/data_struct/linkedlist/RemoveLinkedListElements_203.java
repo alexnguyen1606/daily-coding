@@ -1,27 +1,30 @@
 package com.leetcode.data_struct.linkedlist;
 
+import java.util.Objects;
+
 /**
  * @author:Nguyen Anh Tuan
  *     <p>October 16,2020
  */
 public class RemoveLinkedListElements_203 {
   public ListNode removeElements(ListNode head, int val) {
-    if (head == null) {
-      return head;
+    if (Objects.isNull(head)) {
+      return null;
     }
     ListNode currentNode = head;
     ListNode preNode = null;
+    boolean isFound;
     while (currentNode != null) {
-      Boolean checkFound = false;
+      isFound = false;
       if (currentNode.val == val) {
-        checkFound = true;
+        isFound = true;
         if (preNode == null) {
           head = currentNode.next;
         } else {
           preNode.next = currentNode.next;
         }
       }
-      preNode = checkFound == true ? preNode : currentNode;
+      preNode = isFound ? preNode : currentNode;
       currentNode = currentNode.next;
     }
 

@@ -1,6 +1,6 @@
-package designpattern.simulatoradventure.charactor;
+package com.designpattern.simulatoradventure.charactor;
 
-import designpattern.simulatoradventure.weapons.WeaponBehavior;
+import com.designpattern.simulatoradventure.weapons.WeaponBehavior;
 
 /**
  * @author:Nguyen Anh Tuan

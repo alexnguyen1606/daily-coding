@@ -1,4 +1,4 @@
-package designpattern.observerpattern.weathernotify_rework;
+package com.designpattern.observerpattern.weathernotify_rework;
 
 import java.util.Observable;
 

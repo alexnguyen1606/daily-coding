@@ -1,4 +1,4 @@
-package designpattern.statepattern;
+package com.designpattern.statepattern;
 
 import java.io.Serializable;
 

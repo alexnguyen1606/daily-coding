@@ -1,4 +1,4 @@
-package designpattern.proxypattern;
+package com.designpattern.proxypattern;
 
 /**
  * @author:Nguyen Anh Tuan

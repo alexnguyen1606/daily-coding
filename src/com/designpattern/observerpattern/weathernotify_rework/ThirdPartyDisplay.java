@@ -1,6 +1,6 @@
-package designpattern.observerpattern.weathernotify_rework;
+package com.designpattern.observerpattern.weathernotify_rework;
 
-import designpattern.observerpattern.weathernotify.displays.ElementDisplay;
+import com.designpattern.observerpattern.weathernotify.displays.ElementDisplay;
 
 import java.util.Observable;
 import java.util.Observer;
