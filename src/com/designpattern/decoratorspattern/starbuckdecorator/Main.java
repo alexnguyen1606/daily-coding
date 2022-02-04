@@ -1,9 +1,9 @@
-package designpattern.decoratorspattern.starbuckdecorator;
+package com.designpattern.decoratorspattern.starbuckdecorator;
 
-import designpattern.decoratorspattern.starbuckdecorator.beverage.Beverage;
-import designpattern.decoratorspattern.starbuckdecorator.beverage.Espresso;
-import designpattern.decoratorspattern.starbuckdecorator.condiment.Mocha;
-import designpattern.decoratorspattern.starbuckdecorator.condiment.Soy;
+import com.designpattern.decoratorspattern.starbuckdecorator.beverage.Beverage;
+import com.designpattern.decoratorspattern.starbuckdecorator.beverage.Espresso;
+import com.designpattern.decoratorspattern.starbuckdecorator.condiment.Mocha;
+import com.designpattern.decoratorspattern.starbuckdecorator.condiment.Soy;
 
 /**
  * @author:Nguyen Anh Tuan

@@ -1,4 +1,4 @@
-package designpattern.command.remotecontrol.devices;
+package com.designpattern.command.remotecontrol.devices;
 
 /**
  * @author:Nguyen Anh Tuan

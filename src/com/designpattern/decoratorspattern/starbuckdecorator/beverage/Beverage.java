@@ -1,4 +1,4 @@
-package designpattern.decoratorspattern.starbuckdecorator.beverage;
+package com.designpattern.decoratorspattern.starbuckdecorator.beverage;
 
 public abstract class Beverage {
     private String description = "Unknown Beverage";

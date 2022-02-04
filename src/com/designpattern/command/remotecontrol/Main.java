@@ -1,7 +1,7 @@
-package designpattern.command.remotecontrol;
+package com.designpattern.command.remotecontrol;
 
-import designpattern.command.remotecontrol.devices.Light;
-import designpattern.command.remotecontrol.devices.functional.LightOffCommand;
+import com.designpattern.command.remotecontrol.devices.Light;
+import com.designpattern.command.remotecontrol.devices.functional.LightOffCommand;
 
 /**
  * @author:Nguyen Anh Tuan
@@ -14,6 +14,8 @@ public class Main {
         Light light = new Light();
         Command turnOff = new LightOffCommand(light);
         simpleRemoteControl.setCommand(turnOff);
+        simpleRemoteControl.buttonWasPressed();
+        simpleRemoteControl.undoButtonPressed();
         simpleRemoteControl.buttonWasPressed();
     }
     

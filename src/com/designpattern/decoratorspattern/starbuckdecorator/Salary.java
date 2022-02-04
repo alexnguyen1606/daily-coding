@@ -1,4 +1,4 @@
-package designpattern.decoratorspattern.starbuckdecorator;
+package com.designpattern.decoratorspattern.starbuckdecorator;
 
 /**
  * @author:Nguyen Anh Tuan

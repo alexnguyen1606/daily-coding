@@ -1,4 +1,4 @@
-package designpattern.templatemethod;
+package com.designpattern.templatemethod;
 
 /**
  * @author:Nguyen Anh Tuan

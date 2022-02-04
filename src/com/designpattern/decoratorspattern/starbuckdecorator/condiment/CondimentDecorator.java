@@ -1,6 +1,6 @@
-package designpattern.decoratorspattern.starbuckdecorator.condiment;
+package com.designpattern.decoratorspattern.starbuckdecorator.condiment;
 
-import designpattern.decoratorspattern.starbuckdecorator.beverage.Beverage;
+import com.designpattern.decoratorspattern.starbuckdecorator.beverage.Beverage;
 
 /**
  * @author:Nguyen Anh Tuan

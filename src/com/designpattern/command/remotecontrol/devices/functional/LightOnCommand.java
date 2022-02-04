@@ -1,7 +1,7 @@
-package designpattern.command.remotecontrol.devices.functional;
+package com.designpattern.command.remotecontrol.devices.functional;
 
-import designpattern.command.remotecontrol.Command;
-import designpattern.command.remotecontrol.devices.Light;
+import com.designpattern.command.remotecontrol.Command;
+import com.designpattern.command.remotecontrol.devices.Light;
 
 /**
  * @author:Nguyen Anh Tuan
@@ -9,8 +9,7 @@ import designpattern.command.remotecontrol.devices.Light;
  * 10:33 AM ,January 19,2021
  */
 public class LightOnCommand implements Command {
-    private Light light;
-    
+    private final Light light;
     
     public LightOnCommand(Light light) {
         this.light = light;

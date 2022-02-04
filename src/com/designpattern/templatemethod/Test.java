@@ -1,4 +1,4 @@
-package designpattern.templatemethod;
+package com.designpattern.templatemethod;
 
 import java.util.Iterator;
 import java.util.function.Consumer;
