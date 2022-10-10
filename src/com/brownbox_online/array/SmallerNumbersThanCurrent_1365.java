@@ -12,7 +12,8 @@ import java.util.Map;
 public class SmallerNumbersThanCurrent_1365 {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] result = new int[nums.length];
-        int value,count;
+        int value;
+        int count;
         Map<Integer,Integer> map = new HashMap<>();
         for (int i = 0;i<nums.length;i++){
             value = nums[i];

@@ -43,6 +43,5 @@ public class ReverseLinkedList_206{
       nodes.next = new ListNode(3);
       reverseList(nodes);
 
-    System.out.println("3bb5c5d087497ef38f6ff09afc8594a7ee104496da277aec7eacf59c1f79dee1".equals("3bb5c5d087497ef38f6ff09afc8594a7ee104496da277aec7eacf59c1f79dee1"));
   }
 }
