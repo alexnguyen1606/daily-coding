@@ -15,7 +15,7 @@ public class RotateImage_48 {
         int j;
         int temp;
         for (int i = 0; i < n; i++) {
-            for ( j = i; j < n; j++) {
+            for (j = i; j < n; j++) {
                 temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
@@ -25,7 +25,7 @@ public class RotateImage_48 {
         int k;
         for (int i = 0; i < n; i++) {
             j = 0;
-            k = n-1;
+            k = n - 1;
             while (j < k) {
                 temp = matrix[i][j];
                 matrix[i][j] = matrix[i][k];

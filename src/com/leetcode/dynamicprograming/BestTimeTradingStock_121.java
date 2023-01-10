@@ -8,13 +8,12 @@ package com.leetcode.dynamicprograming;
 public class BestTimeTradingStock_121 {
 
     public int maxProfit(int[] prices) {
+        int minPriceBuyIndex = 0;
         int maxProfit = 0;
         for (int i = 0; i < prices.length; i++) {
-            for (int j = i + 1; j <= prices.length - 1; j++) {
-                int profit = prices[j] - prices[i];
-                if (profit > maxProfit) {
-                    maxProfit = profit;
-                }
+            maxProfit = Math.max(maxProfit, prices[i] - prices[minPriceBuyIndex]);
+            if (prices[i] < prices[minPriceBuyIndex]) {
+                minPriceBuyIndex = i;
             }
         }
         return maxProfit;

@@ -5,33 +5,45 @@ import java.util.List;
 
 /**
  * @author:Nguyen Anh Tuan
- *     <p>11:45 AM ,December 10,2020
+ * <p>11:45 AM ,December 10,2020
  */
 public class validBST_98 {
-  public boolean isValidBST(TreeNode root) {
-    List<Integer> list = new ArrayList<>();
-    dfsInorder(root, list);
-    int i = 1;
-    int j = list.size() - 1;
-    while (i <= j) {
-      if (list.get(i - 1) >= list.get(i)) {
-        return false;
-      }
-      if (list.get(j - 1) >= list.get(j)) {
-        return false;
-      }
-      i++;
-      j--;
+    public boolean isValidBST(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        dfsInorder(root, list);
+        int i = 1;
+        int j = list.size() - 1;
+        while (i <= j) {
+            if (list.get(i - 1) >= list.get(i)) {
+                return false;
+            }
+            if (list.get(j - 1) >= list.get(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
-    return true;
-  }
 
-  private void dfsInorder(TreeNode treeNode, List<Integer> list) {
-    if (treeNode == null) {
-      return;
+    private void dfsInorder(TreeNode treeNode, List<Integer> list) {
+        if (treeNode == null) {
+            return;
+        }
+        dfsInorder(treeNode.left, list);
+        list.add(treeNode.val);
+        dfsInorder(treeNode.right, list);
     }
-    dfsInorder(treeNode.left, list);
-    list.add(treeNode.val);
-    dfsInorder(treeNode.right, list);
-  }
+
+    public boolean isValidBST2(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        boolean left = root.left != null ? root.left.val < root.val : true;
+        boolean right = root.right != null ? root.right.val > root.val : true;
+
+        return left && right && isValidBST2(root.left) && isValidBST2(root.right);
+    }
+
 }
