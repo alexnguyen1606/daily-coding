@@ -40,8 +40,8 @@ public class validBST_98 {
             return true;
         }
 
-        boolean left = root.left != null ? root.left.val < root.val : true;
-        boolean right = root.right != null ? root.right.val > root.val : true;
+        boolean left = root.left == null || root.left.val < root.val;
+        boolean right = root.right == null || root.right.val > root.val;
 
         return left && right && isValidBST2(root.left) && isValidBST2(root.right);
     }
