@@ -2,22 +2,23 @@ package com.leetcode.data_struct.tree;
 
 /**
  * @author:Nguyen Anh Tuan
- *     <p>4:32 PM ,November 13,2020
+ * <p>4:32 PM ,November 13,2020
  */
 public class TreeNode {
-  public int val;
-  public TreeNode left;
-  public TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-  TreeNode() {}
+    TreeNode() {
+    }
 
-  TreeNode(int val) {
-    this.val = val;
-  }
+    TreeNode(int val) {
+        this.val = val;
+    }
 
-  TreeNode(int val, TreeNode left, TreeNode right) {
-    this.val = val;
-    this.left = left;
-    this.right = right;
-  }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 }

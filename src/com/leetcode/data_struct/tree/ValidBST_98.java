@@ -7,7 +7,8 @@ import java.util.List;
  * @author:Nguyen Anh Tuan
  * <p>11:45 AM ,December 10,2020
  */
-public class validBST_98 {
+public class ValidBST_98 {
+
     public boolean isValidBST(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         dfsInorder(root, list);

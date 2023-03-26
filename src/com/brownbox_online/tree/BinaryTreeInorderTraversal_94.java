@@ -14,7 +14,8 @@ public class BinaryTreeInorderTraversal_94 {
 		travel(root,result);
 		return result;
 	}
-	
+
+	// L -> N -> R
 	public void travel(TreeNode root,List<Integer> result){
 		if (root==null){
 			return;
