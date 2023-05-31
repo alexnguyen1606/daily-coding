@@ -18,9 +18,10 @@ public class WeatherStation {
         
         subjects.setMeasurements(10,100);
         System.out.println();
+        current.disconnect();
         subjects.setMeasurements(25,70);
         System.out.println();
-        subjects.registerObserver(forecast);
+
         subjects.setMeasurements(40,90);
         
         

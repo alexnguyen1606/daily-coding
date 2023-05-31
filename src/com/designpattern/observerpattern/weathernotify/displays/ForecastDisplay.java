@@ -23,14 +23,18 @@ public class ForecastDisplay implements Observer, ElementDisplay {
         System.out.println("Forecast display ");
         System.out.println("Temperature:"+temperature);
         System.out.println("Humidity:"+humidity);
+        System.out.println("--------");
     }
-    
-   
-    
+
     @Override
     public void update(Integer temp, Integer humidity) {
        this.humidity = humidity;
        this.temperature = temp;
        display();
+    }
+
+    @Override
+    public void disconnect() {
+        weatherSubject.removerObserver(this);
     }
 }

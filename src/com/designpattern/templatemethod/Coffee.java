@@ -11,8 +11,6 @@ public class Coffee extends BeverageCaffein {
         System.out.println("Brew Tea in Hot water 95C");
     }
     
-    
-    
     @Override
     public void pourInCup() {
         System.out.println("Pour Coffee in cup");

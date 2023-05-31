@@ -22,6 +22,7 @@ public class CurrentConditionDisplay implements Observer, ElementDisplay {
     public void display() {
         System.out.println("Current display ");
         System.out.println("Temp :"+temperature+" humidity: "+humidity);
+        System.out.println("--------");
     }
     
     
@@ -31,5 +32,9 @@ public class CurrentConditionDisplay implements Observer, ElementDisplay {
         this.temperature = temp;
         display();
     }
-    
+
+    @Override
+    public void disconnect() {
+        this.weatherSubject.removerObserver(this);
+    }
 }

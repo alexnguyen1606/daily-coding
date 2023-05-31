@@ -7,5 +7,8 @@ package com.designpattern.observerpattern.weathernotify;
  */
 public interface Observer {
     void update(Integer temp,Integer humidity);
+    default void disconnect() {
+        throw new UnsupportedOperationException("Operator not support");
+    }
     
 }

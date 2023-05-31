@@ -11,20 +11,21 @@ import java.util.List;
 public class BreakfastMenuIterator implements Menu {
     private List<MenuItem> items;
     private int itemIndex;
+
     public BreakfastMenuIterator(List<MenuItem> items) {
         this.items = items;
     }
-    
+
     @Override
     public boolean hasNext() {
-        return items.size()>0;
+        return !items.isEmpty();
     }
-    
+
     @Override
     public MenuItem next() {
         return items.remove(itemIndex);
     }
-    
+
     @Override
     public Iterator<MenuItem> createItorator() {
         return this;
