@@ -1,9 +1,9 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.stores;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.stores;
 
-import designpattern.factorypattern.abstracts.pizzaingredient.factory.ChicagoIngredientFactory;
-import designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
-import designpattern.factorypattern.abstracts.pizzaingredient.pizzas.CheesePizza;
-import designpattern.factorypattern.abstracts.pizzaingredient.pizzas.Pizza;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.factory.ChicagoIngredientFactory;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas.CheesePizza;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas.Pizza;
 
 /**
  * @author:Nguyen Anh Tuan

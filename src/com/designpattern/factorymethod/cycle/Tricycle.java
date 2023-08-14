@@ -13,10 +13,5 @@ public class Tricycle implements Cycle {
     public void run() {
     System.out.println("Tricycle run");
     }
-    public static CycleFactory factory = new CycleFactory() {
-        @Override
-        public Cycle getCycle() {
-            return new Tricycle();
-        }
-    };
+    public static CycleFactory factory = Tricycle::new;
 }

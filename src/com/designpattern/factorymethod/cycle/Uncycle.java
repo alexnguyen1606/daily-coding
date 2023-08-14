@@ -12,5 +12,5 @@ public class Uncycle implements Cycle {
     System.out.println("uncycel cant run");
   }
 
-  public static CycleFactory factory = () -> new Uncycle();
+  public static CycleFactory factory = Uncycle::new;
 }

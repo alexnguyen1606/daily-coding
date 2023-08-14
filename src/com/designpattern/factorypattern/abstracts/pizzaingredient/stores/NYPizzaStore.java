@@ -1,10 +1,10 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.stores;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.stores;
 
-import designpattern.factorypattern.abstracts.pizzaingredient.factory.NYPizzaIngredientFactory;
-import designpattern.factorypattern.abstracts.pizzaingredient.pizzas.CheesePizza;
-import designpattern.factorypattern.abstracts.pizzaingredient.pizzas.PepperoniPizza;
-import designpattern.factorypattern.abstracts.pizzaingredient.pizzas.Pizza;
-import designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.factory.NYPizzaIngredientFactory;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas.CheesePizza;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas.PepperoniPizza;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas.Pizza;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
 
 /**
  * @author:Nguyen Anh Tuan

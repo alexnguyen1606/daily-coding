@@ -1,8 +1,8 @@
-package designpattern.factorypattern.method.pizzafactory;
+package com.designpattern.factorypattern.method.pizzafactory;
 
-import designpattern.factorypattern.method.pizzafactory.stores.ChicagoPizzaStore;
-import designpattern.factorypattern.method.pizzafactory.stores.NYPizzaStore;
-import designpattern.factorypattern.method.pizzafactory.stores.PizzaStore;
+import com.designpattern.factorypattern.method.pizzafactory.stores.ChicagoPizzaStore;
+import com.designpattern.factorypattern.method.pizzafactory.stores.NYPizzaStore;
+import com.designpattern.factorypattern.method.pizzafactory.stores.PizzaStore;
 
 /**
  * @author:Nguyen Anh Tuan

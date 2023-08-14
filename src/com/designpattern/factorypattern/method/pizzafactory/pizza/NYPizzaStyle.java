@@ -1,4 +1,4 @@
-package designpattern.factorypattern.method.pizzafactory.pizza;
+package com.designpattern.factorypattern.method.pizzafactory.pizza;
 
 /**
  * @author:Nguyen Anh Tuan

@@ -1,14 +1,14 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.factory;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.factory;
 
-import designpattern.factorypattern.abstracts.pizzaingredient.*;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.Clams;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.FreshClams;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.Dough;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.ThinCrustDough;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.Cheese;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.ReggianoCheese;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.sauce.MarinaraSauce;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.veggies.*;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.*;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.Clams;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.FreshClams;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.Dough;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.ThinCrustDough;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.Cheese;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.ReggianoCheese;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.sauce.MarinaraSauce;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.veggies.*;
 
 /**
  * @author:Nguyen Anh Tuan

@@ -1,7 +1,7 @@
-package designpattern.factorypattern.method.pizzafactory.stores;
+package com.designpattern.factorypattern.method.pizzafactory.stores;
 
-import designpattern.factorypattern.method.pizzafactory.pizza.NYPizzaStyle;
-import designpattern.factorypattern.method.pizzafactory.pizza.Pizza;
+import com.designpattern.factorypattern.method.pizzafactory.pizza.NYPizzaStyle;
+import com.designpattern.factorypattern.method.pizzafactory.pizza.Pizza;
 
 /**
  * @author:Nguyen Anh Tuan

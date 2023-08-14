@@ -1,4 +1,4 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams;
 
 /**
  * @author:Nguyen Anh Tuan

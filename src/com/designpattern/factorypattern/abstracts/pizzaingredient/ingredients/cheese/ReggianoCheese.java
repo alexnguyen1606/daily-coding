@@ -1,4 +1,4 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese;
 
 /**
  * @author:Nguyen Anh Tuan

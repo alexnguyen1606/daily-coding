@@ -1,6 +1,6 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.pizzas;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.pizzas;
 
-import designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.factory.PizzaIngradientFactory;
 
 /**
  * @author:Nguyen Anh Tuan

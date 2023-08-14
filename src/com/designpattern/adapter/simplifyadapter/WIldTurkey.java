@@ -1,4 +1,4 @@
-package designpattern.adapter.simplifyadapter;
+package com.designpattern.adapter.simplifyadapter;
 
 /**
  * @author:Nguyen Anh Tuan

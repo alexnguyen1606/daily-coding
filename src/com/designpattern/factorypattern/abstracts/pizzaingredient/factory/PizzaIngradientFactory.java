@@ -1,12 +1,12 @@
-package designpattern.factorypattern.abstracts.pizzaingredient.factory;
+package com.designpattern.factorypattern.abstracts.pizzaingredient.factory;
 
-import designpattern.factorypattern.abstracts.pizzaingredient.Sauce;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.Pepperoni;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.SlicedPepperoni;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.veggies.Veggies;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.Cheese;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.Clams;
-import designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.Dough;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.Sauce;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.Pepperoni;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.SlicedPepperoni;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.veggies.Veggies;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.cheese.Cheese;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.clams.Clams;
+import com.designpattern.factorypattern.abstracts.pizzaingredient.ingredients.dough.Dough;
 
 /**
  * @author:Nguyen Anh Tuan
