@@ -7,7 +7,7 @@ import java.util.Queue;
  * @author:Nguyen Anh Tuan
  *     <p>November 03,2020
  */
-public class StackImplQueue_255 {
+public class StackImplByQueue_255 {
   private Queue<Integer> mainQueue = new LinkedList<>();
   private Queue<Integer> tempQueue = new LinkedList<>();
 

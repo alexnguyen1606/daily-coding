@@ -6,13 +6,13 @@ import java.util.Stack;
  * @author:Nguyen Anh Tuan
  *     <p>November 03,2020
  */
-public class QueueImplStack_232 {
+public class QueueImplByStack_232 {
   /** Initialize your data structure here. */
   private Stack<Integer> mainStack;
 
   private Stack<Integer> tempStack;
 
-  public QueueImplStack_232() {
+  public QueueImplByStack_232() {
     mainStack = new Stack<>();
     tempStack = new Stack<>();
   }

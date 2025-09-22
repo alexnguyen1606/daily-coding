@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             MyService myService = new MyServiceImpl();
-            Naming.bind("RemoteHello",myService);
+            Naming.bind("RemoteHello", myService);
         } catch (RemoteException | AlreadyBoundException | MalformedURLException e) {
             e.printStackTrace();
         }

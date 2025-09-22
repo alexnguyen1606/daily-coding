@@ -17,7 +17,6 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
-
 /**
  * Nguyen Anh Tuan
  * Date: 21/12/2023
@@ -42,7 +41,13 @@ public class RSAKeyPairGenerator {
     }
 
     public static void main(String[] args) throws IOException, InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, NoSuchAlgorithmException {
+        generatePairKey();
         var value = "Xin chào";
+        var student = new Student();
+        student.id = 1L;
+        student.name = "Nguyễn Anh Tuấn";
+        student.age = "23 tuổi";
+
         System.out.println(value);
         var encrypted = encryptMessage(value);
         System.out.println(encrypted);
@@ -85,6 +90,25 @@ public class RSAKeyPairGenerator {
             fos.write(keyPair.getPrivate().getEncoded());
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+
+    }
+
+    public static class Student {
+        private String name;
+        private String age;
+        private Long id;
+
+        public String getName() {
+            return name;
+        }
+
+        public String getAge() {
+            return age;
+        }
+
+        public Long getId() {
+            return id;
         }
 
     }

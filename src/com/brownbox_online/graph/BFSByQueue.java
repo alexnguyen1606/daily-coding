@@ -18,7 +18,7 @@ public class BFSByQueue {
 		// Đánh dấu điểm bắt đầu
 		queue.add(0);
 		while (!queue.isEmpty()){
-			Integer u =  queue.poll();
+			Integer u = queue.poll();
 			//xử lý u
 			System.out.print(u+" ");
 			for (int v=0;v<graph.length;v++){

@@ -35,19 +35,33 @@ public class MaxHeap implements IHeap {
         return returnValue;
     }
 
+    /**
+     * Restores the max-heap property by "bubbling down" the element at index i.
+     * This is called after removing the root or replacing an element.
+     * It compares the current node with its children and swaps with the larger child if necessary,
+     * continuing until the heap property is restored.
+     *
+     * @param i the index to start heapifying down from (usually 1 for the root)
+     */
     private void heapifyDown(int i) {
         int iLeft, iRight, biggerValueIndex;
+        // While the current node has at least a left child
         while ((i * 2) <= size) {
-            iLeft = i * 2;
-            biggerValueIndex = iLeft;
-            iRight = iLeft + 1;
+            iLeft = i * 2; // Left child index
+            biggerValueIndex = iLeft; // Assume left child is bigger initially
+            iRight = iLeft + 1; // Right child index
+
+            // If right child exists and is greater than left child, update biggerValueIndex
             if (iRight <= size && array[iRight] > array[biggerValueIndex]) {
                 biggerValueIndex = iRight;
             }
-            if (array[biggerValueIndex] < array[i]) {
+
+            // If the bigger child is greater than the current node, swap them
+            if (array[biggerValueIndex] > array[i]) {
                 swap(biggerValueIndex, i);
-                i = biggerValueIndex;
+                i = biggerValueIndex; // Move down to the child index
             } else {
+                // Heap property is satisfied, break out of the loop
                 break;
             }
         }

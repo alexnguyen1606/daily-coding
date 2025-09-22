@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class QuickSort extends BaseSort {
     public static void main(String[] args) {
         int[] array = {1, 2, 12, 45, 23, 5, 7, 0};
+        System.out.println("Start " + Arrays.toString(array));
         quickSort(array, 0, array.length - 1);
         print(array);
     }
@@ -22,10 +23,11 @@ public class QuickSort extends BaseSort {
         // Tìm key
         // Có thể lấy ở vị trí bất kỳ
         // Sử dụng middle index in array
-        int key = array[L + (R - L) / 2];
-
-        int pivotIndex = pivot(array, L, R, key);
-        System.out.println("L =" + L + " R=" + R + " key=" + key + " pivotIndex=" + pivotIndex);
+        int midIndex = L + (R - L) / 2;
+        int pivotValue = array[midIndex];
+        int pivotIndex = pivot(array, L, R, pivotValue);
+        System.out.println("L =" + L + " R=" + R + " pivotValue=" + pivotValue + " pivotIndex=" + pivotIndex);
+        System.out.println(Arrays.toString(array));
         quickSort(array, L, pivotIndex - 1);
         quickSort(array, pivotIndex, R);
     }

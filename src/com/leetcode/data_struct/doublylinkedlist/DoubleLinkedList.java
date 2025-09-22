@@ -16,6 +16,7 @@ public class DoubleLinkedList<T> {
     }
 
     private Node head;
+    private Node tail;
 
     public DoubleLinkedList(T t) {
         head = new Node(t);
@@ -23,22 +24,25 @@ public class DoubleLinkedList<T> {
 
     public DoubleLinkedList() {
         head = null;
+        tail = null;
     }
 
     public void add(T t) {
         Node newNode = new Node(t);
         if (isEmpty()) {
             head = newNode;
+            tail = null;
+            return;
+        }
+
+        if (tail == null) {
+            tail = newNode;
+            head.next = tail;
+            tail.prev = head;
         } else {
-            Node currentNode = head;
-            while (currentNode != null) {
-                if (currentNode.next == null) {
-                    currentNode.next = newNode;
-                    newNode.prev = currentNode;
-                    break;
-                }
-                currentNode = currentNode.next;
-            }
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
         }
     }
 
