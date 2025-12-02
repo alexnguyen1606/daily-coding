@@ -1,4 +1,4 @@
-package com.datastucture;
+package com.datastucture.hashtable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,16 +22,14 @@ public class LRUCacheOptimize implements ILRUCache {
             return -1;
         }
         int value = cache.get(key);
-        priorityQueue.remove(key);
-        priorityQueue.add(key);
+        addToFirst(key);
         return value;
     }
 
     @Override
     public void put(int key, int value) {
         if (cache.containsKey(key)) {
-            priorityQueue.remove(key);
-            priorityQueue.add(key);
+            addToFirst(key);
             cache.put(key, value);
             return;
         }
@@ -41,6 +39,11 @@ public class LRUCacheOptimize implements ILRUCache {
         }
         priorityQueue.add(key);
         cache.put(key, value);
+    }
+
+    private void addToFirst(int key) {
+        priorityQueue.remove(key);
+        priorityQueue.add(key);
     }
 
     public static void main(String[] args) {

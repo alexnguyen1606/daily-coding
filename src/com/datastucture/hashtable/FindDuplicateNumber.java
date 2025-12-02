@@ -1,4 +1,4 @@
-package com.datastucture;
+package com.datastucture.hashtable;
 //https://leetcode.com/problems/find-the-duplicate-number
 public class FindDuplicateNumber {
 

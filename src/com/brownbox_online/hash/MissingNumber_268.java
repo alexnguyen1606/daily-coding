@@ -21,4 +21,5 @@ public class MissingNumber_268 {
 		}
 		return missingNumber;
 	}
+
 }

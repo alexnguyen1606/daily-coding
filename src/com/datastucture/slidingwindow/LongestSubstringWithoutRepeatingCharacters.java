@@ -1,11 +1,10 @@
 package com.datastucture.slidingwindow;
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
+//https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 public class LongestSubstringWithoutRepeatingCharacters {
-
 
     public static int lengthOfLongestSubstring(String s) {
         Set<Character> unique = new HashSet<>();
