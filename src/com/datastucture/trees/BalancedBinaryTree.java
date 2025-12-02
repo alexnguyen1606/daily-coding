@@ -1,9 +1,6 @@
-package com.datastucture.tree;
+package com.datastucture.trees;
 
 import com.brownbox_online.tree.TreeNode;
-
-import java.util.HashMap;
-import java.util.Map;
 
 //https://leetcode.com/problems/balanced-binary-tree/description/
 public class BalancedBinaryTree {

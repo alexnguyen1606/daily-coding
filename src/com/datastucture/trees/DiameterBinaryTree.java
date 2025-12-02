@@ -1,4 +1,4 @@
-package com.datastucture.tree;
+package com.datastucture.trees;
 
 import com.brownbox_online.tree.TreeNode;
 
