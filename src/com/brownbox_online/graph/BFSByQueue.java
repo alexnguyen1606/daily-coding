@@ -11,6 +11,7 @@ import java.util.Set;
  * 11:16 PM ,August 24,2021
  */
 public class BFSByQueue {
+
 	public static void bfsByQueue(int[][] graph){
 		Set<Integer> traveled = new HashSet<>();
 		Queue<Integer> queue = new LinkedList<>();
