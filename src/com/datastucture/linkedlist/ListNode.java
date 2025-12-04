@@ -29,4 +29,8 @@ package com.datastucture.linkedlist;
               current = current.next;
           }
       }
+
+      public void print() {
+          print(this);
+      }
   }
