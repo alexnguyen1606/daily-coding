@@ -15,7 +15,7 @@ public class ReorderList {
 
             current.next = newNode;
             current.next.next = temp;
-            
+
             current = temp;
             newNode = temp2;
         }
