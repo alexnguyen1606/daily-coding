@@ -23,7 +23,7 @@ public class LongestRepeatingCharacterReplacement {
             counter['Z' - charAtRight]++;
             int windowLength = right - left + 1;
             int mostFrequency = mostFrequency(counter);
-            boolean isValid = windowLength - mostFrequency <= k;
+            boolean isValid = (windowLength - mostFrequency) <= k;
             if (isValid) {
                 longest = Math.max(windowLength, longest);
                 right++;
