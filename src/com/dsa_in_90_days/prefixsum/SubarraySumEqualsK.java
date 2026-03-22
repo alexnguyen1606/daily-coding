@@ -1,37 +1,32 @@
 package com.dsa_in_90_days.prefixsum;
 
+import java.util.HashMap;
+import java.util.Map;
+
 //https://leetcode.com/problems/subarray-sum-equals-k/description
 public class SubarraySumEqualsK {
 
     public static int subarraySum(int[] nums, int k) {
         int count = 0;
-        int[] prefixSum = new int[nums.length];
+        int prefixSum = 0;
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        frequencyMap.put(0, 1);
         for (int i = 0; i < nums.length; i++) {
-            if (i == 0) {
-                prefixSum[i] = nums[i];
-                if (prefixSum[i] == k) {
-                    count++;
-                }
-                continue;
+            prefixSum += nums[i];
+            int remove = prefixSum - k;
+            if (frequencyMap.containsKey(remove)) {
+                count += frequencyMap.get(remove);
             }
-            prefixSum[i] = prefixSum[i - 1] + nums[i];
-            if (prefixSum[i] == k) {
-                count++;
-            }
-        }
-        for (int i = prefixSum.length - 1; i >= 0; i--) {
-            for (int j = i - 1; j >= 0; j--) {
-                int delta = prefixSum[i] - prefixSum[j];
-                if (delta == k) {
-                    count++;
-                }
+            if (frequencyMap.containsKey(prefixSum)) {
+                frequencyMap.put(prefixSum, frequencyMap.get(prefixSum) + 1);
+            } else {
+                frequencyMap.put(prefixSum, 1);
             }
         }
         return count;
     }
-
     public static void main(String[] args) {
-        System.out.println(subarraySum(new int[]{1, 1, 1}, 2));
+        System.out.println(subarraySum(new int[]{1, 2, 1, 2, 1}, 3));
     }
 
 
