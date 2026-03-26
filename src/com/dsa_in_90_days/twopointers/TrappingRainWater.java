@@ -23,7 +23,7 @@ public class TrappingRainWater {
             int maxTrap = 0;
             while (right < height.length) {
                 int trap = trap(left, right, height);
-                
+
                 maxTrap = Math.max(trap, maxTrap);
 
                 right++;
