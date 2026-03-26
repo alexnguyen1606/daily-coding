@@ -1,4 +1,4 @@
-package com.dsa_in_90_days.slidingwindow;
+package com.dsa_in_90_days.stack;
 
 import java.util.Deque;
 import java.util.LinkedList;
