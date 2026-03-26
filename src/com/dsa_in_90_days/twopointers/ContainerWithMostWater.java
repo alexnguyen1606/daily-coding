@@ -2,18 +2,6 @@ package com.dsa_in_90_days.twopointers;
 
 //https://leetcode.com/problems/container-with-most-water
 public class ContainerWithMostWater {
-
-    public int maxAreaBruteForce(int[] height) {
-        int rs = 0;
-        for (int i = 0; i < height.length; i++) {
-            for (int j = i + 1; j < height.length; j++) {
-                int area = calculateArea(height, i, j);
-                rs = Math.max(rs, area);
-            }
-        }
-        return rs;
-    }
-
     public int maxArea(int[] height) {
         int left = 0;
         int right = height.length - 1;
