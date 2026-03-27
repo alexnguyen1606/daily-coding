@@ -21,15 +21,24 @@ public class TrappingRainWater {
                 continue;
             }
             int maxTrap = 0;
-            while (right < height.length) {
-                int trap = trap(left, right, height);
-
+            int tempRight = right;
+            while (tempRight < height.length) {
+                int trap = trap(left, tempRight, height);
+                if (maxTrap == trap) {
+                    break;
+                }
                 maxTrap = Math.max(trap, maxTrap);
 
-                right++;
+                tempRight++;
             }
             totalTrap += maxTrap;
-            left = right;
+            if (maxTrap > 0) {
+                left = right;
+                right = tempRight;
+            } else {
+                right++;
+                left++;
+            }
 
         }
         return totalTrap;
@@ -51,8 +60,8 @@ public class TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{0,1,0,2,1,0,1,3,2,1,2,1};
-        System.out.println(trap( array));
+        int[] array = new int[]{5,2,1,2,1,5};
+        System.out.println(trap(array));
     }
 
 }
