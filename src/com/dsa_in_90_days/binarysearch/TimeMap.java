@@ -28,35 +28,36 @@ public class TimeMap {
         return findValueByTime(array, timestamp);
     }
 
-    private String findValueByTime(Node[] array, int timestamp) {
+    public String findValueByTime(Node[] array, int timestamp) {
         int left = 0;
         int right = array.length - 1;
 
-        int result = 0;
-        while (left <= right && left >= 0) {
-            if (array[left].timestamp > timestamp) {
-                return "";
-            }
-            if (array[left].timestamp == timestamp) {
-                result = left;
-                break;
-            }
-            if (array[right].timestamp <= timestamp) {
-                result = right;
-                break;
-            }
-            int mid = (left + right) / 2;
-            if (array[mid].timestamp == timestamp) {
-                result = mid;
-                break;
-            }
-            if (array[mid].timestamp > timestamp) {
-                right = mid + 1;
-            } else if (array[mid].timestamp < timestamp) {
-                left = mid;
-            }
-        }
+        Integer result = findIndexMostAssociatedTime(array, timestamp, left, right);
+        if (result == null) return "";
         return array[result].value;
+    }
+
+    public Integer findIndexMostAssociatedTime(Node[] array, int timestamp, int left, int right) {
+        if (left > right) {
+            return null;
+        }
+        if (array[left].timestamp > timestamp) {
+            return null;
+        }
+        if (array[left].timestamp == timestamp) {
+            return left;
+        }
+        if (array[right].timestamp <= timestamp) {
+            return right;
+        }
+        int mid = (left + right) / 2;
+        if (array[mid].timestamp == timestamp) {
+            return mid;
+        }
+        if (array[mid].timestamp > timestamp) {
+            return findIndexMostAssociatedTime(array, timestamp, left, mid + 1);
+        } else
+            return findIndexMostAssociatedTime(array, timestamp, mid, right);
     }
 
 
