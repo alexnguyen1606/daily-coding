@@ -1,67 +1,80 @@
 package com.dsa_in_90_days.binarysearch;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //Time Based Key-Value Store
 public class TimeMap {
 
-    private final Map<String, Set<Node>> map;
+    private final Map<String, List<Node>> map;
 
     public TimeMap() {
         map = new HashMap<>();
     }
 
+    // timestamp is strictly increasing, so we can add new node to the end of list
     public void set(String key, String value, int timestamp) {
         Node node = new Node(timestamp, value);
         if (!map.containsKey(key)) {
-            map.put(key, new TreeSet<>(Comparator.comparing(o -> o.timestamp)));
+            map.put(key, new ArrayList<>());
         }
         map.get(key).add(node);
     }
 
     public String get(String key, int timestamp) {
         if (!map.containsKey(key)) {
-            return null;
+            return "";
         }
-        Node[] array = new Node[map.get(key).size()];
-        array = map.get(key).toArray(array);
-        return findValueByTime(array, timestamp);
+        return findValueByTime(map.get(key), timestamp);
     }
 
-    public String findValueByTime(Node[] array, int timestamp) {
+    public String findValueByTime(List<Node> array, int timestamp) {
         int left = 0;
-        int right = array.length - 1;
+        int right = array.size() - 1;
 
         Integer result = findIndexMostAssociatedTime(array, timestamp, left, right);
-        if (result == null) return "";
-        return array[result].value;
+        if (result == null) {
+            return "";
+        }
+        return array.get(result).value;
     }
 
-    public Integer findIndexMostAssociatedTime(Node[] array, int timestamp, int left, int right) {
+    public Integer findIndexMostAssociatedTime(List<Node> array, int timestamp, int left, int right) {
         if (left > right) {
             return null;
         }
-        if (array[left].timestamp > timestamp) {
+        if (array.get(left).timestamp > timestamp) {
             return null;
         }
-        if (array[left].timestamp == timestamp) {
+        if (array.get(left).timestamp == timestamp) {
             return left;
         }
-        if (array[right].timestamp <= timestamp) {
+        if (array.get(right).timestamp <= timestamp) {
             return right;
         }
         int mid = (left + right) / 2;
-        if (array[mid].timestamp == timestamp) {
+        if (array.get(mid).timestamp == timestamp) {
             return mid;
         }
-        if (array[mid].timestamp > timestamp) {
+        if (array.get(mid).timestamp > timestamp) {
+            if (mid + 1 == right) {
+                if (timestamp > array.get(left).timestamp) {
+                    return findIndexMostAssociatedTime(array, timestamp, left, mid);
+                } else {
+                    return mid;
+                }
+            }
             return findIndexMostAssociatedTime(array, timestamp, left, mid + 1);
-        } else
-            return findIndexMostAssociatedTime(array, timestamp, mid, right);
+        } else if (mid == left) {
+            return mid;
+        }
+        return findIndexMostAssociatedTime(array, timestamp, mid, right);
     }
 
 
-    private static class Node {
+    public static class Node {
         private final Integer timestamp;
         private String value;
 
@@ -69,29 +82,6 @@ public class TimeMap {
             this.timestamp = timestamp;
             this.value = value;
         }
-
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Node node = (Node) o;
-            return timestamp.equals(node.timestamp);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hashCode(timestamp);
-        }
-    }
-
-    public static void main(String[] args) {
-        TimeMap map = new TimeMap();
-        map.set("foo", "bar", 1);
-        map.set("foo", "toliet", 5);
-        map.set("foo", "bucket", 10);
-        map.set("foo", "bar2", 20);
-        System.out.println(map.get("foo", 15));
     }
 
 }
