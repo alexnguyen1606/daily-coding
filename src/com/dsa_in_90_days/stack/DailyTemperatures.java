@@ -9,10 +9,6 @@ public class DailyTemperatures {
         Stack<Integer> stack = new Stack<>();
         for (int i = temperatures.length - 1; i >= 0; i--) {
             int temperature = temperatures[i];
-            if (stack.isEmpty()) {
-                stack.push(i);
-                continue;
-            }
             while (!stack.isEmpty()) {
                 int index = stack.peek();
                 if (temperatures[index] > temperature) {
