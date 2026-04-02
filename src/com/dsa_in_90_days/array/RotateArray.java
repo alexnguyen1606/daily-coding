@@ -2,6 +2,12 @@ package com.dsa_in_90_days.array;
 
 public class RotateArray {
     public int[] solution(int[] A, int K) {
+        if (K == 0) {
+            return A;
+        }
+        if (A.length == 0) {
+            return A;
+        }
         int rotation = K > A.length ? K / A.length : K;
 
         int[] temps = new int[rotation];
